@@ -1150,3 +1150,31 @@ color: #ffffff;
   font-size:14px;
   text-align: center;
 }
+
+
+@media (max-width: 768px) {
+  .product-cards,
+  .info-cards,
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .product-card,
+  .info-card,
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+}   
+
+@media (max-width: 768px) {
+  .product-section,
+  .cards-section,
+  .hero {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
