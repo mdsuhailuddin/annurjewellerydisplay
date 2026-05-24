@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | AN-NUR Jewellery Display</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --panel: #151515;
+      --gold: #d4af37;
+      --text: #ffffff;
+      --muted: #cfcfcf;
+      --border: rgba(212, 175, 55, 0.2);
+      --radius: 18px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background:#6C2BD9 ;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #111111;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-copy strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .brand-copy small {
+      color: #cccccc;
+      font-size: 0.84rem;
+    }
+
+    .back-link {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .products-hero {
+      padding: 70px 0 30px;
+      text-align: center;
+    }
+
+    .products-hero h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .products-hero p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .product-grid {
+      padding: 30px 0 80px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      padding: 16px;
+    }
+
+    .product-card h3 {
+      margin: 16px 0 8px;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .product-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .product-card .btn {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #111111;
+      font-weight: 700;
+    }
+    .product-card img {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+  border-radius: 14px;
+
+  background: #0f0f0f;
+}
+.product-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  overflow: hidden;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .btn {
+  margin-top: auto;
+}
+.product-card img {
+  width: 100%;
+  height: 280px;
+
+  display: block;
+  border-radius: 14px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #ffffff;
+  padding: 10px;
+    transition: transform 0.4s ease;
+}
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.size-rates {
+  margin-top: 14px;
+
+  background: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.size-rates div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 14px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+
+  font-size: 0.95rem;
+}
+
+.size-rates div:last-child {
+  border-bottom: none;
+}
+
+.size-rates span {
+  color: #d6d6d6;
+}
+
+.size-rates strong {
+  color: #d4af37;
+  font-size: 1rem;
+}
+
+
+    @media (max-width: 900px) {
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+.text {
+  text-align: center;
+  color: #d4af37;
+}
+
+
+
+
+
+    
+  </style>
+  <link rel="icon" type="image/png" href="images/product360/logo.jpg">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand-copy">
+        <strong>AN-NUR Jewellery Display</strong>
+        <small>Chennai • Parcel delivery available</small>
+      </div>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <section class="products-hero">
+    <div class="container">
+      <h1>Our Product Display Collection</h1>
+      <p>
+       Explore our jewellery display pads available in different sizes, inch-wise models
+      </p>
+    </div>
+  </section>
+
+  <section class="container product-grid">
+    <div class="product-card">
+      <img src="images/product360/13.jpeg" alt="Jewellery display stand">
+      <h3>ROBO NECK</h3>
+      <div class="size-rates">
+
+  <div><span>8 Inch</span> <strong>₹650</strong></div>
+  <div><span>10 Inch</span> <strong>₹700</strong></div>
+  <div><span>12 Inch</span> <strong>₹750</strong></div>
+  <div><span>14 Inch</span> <strong>₹800</strong></div>
+  <div><span>16 Inch</span> <strong>₹850</strong></div>
+  <div><span>18 Inch</span> <strong>₹900</strong></div>
+</div>
+      <a href="tel:+919962742785" class="btn">Call for Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product360/14.jpeg" alt="Jewellery tray">
+      <h3>Doom Chain Stand</h3>
+
+      <div class="size-rates">
+  <div><span>12 X 12 Inch</span> <strong>₹425</strong></div>
+  <div><span>12 X 16 Inch</span> <strong>₹700</strong></div>
+  
+</div>
+      <a href="tel:+919962742785" class="btn">Call for Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product360/product3/1.jpg" alt="Ring display box">
+      <h3>Bangle Stand</h3>
+      <div class="size-rates">
+  <div><span>12 X 12 Inch</span> <strong>₹750</strong></div>
+  <div><span>12 X 16 Inch</span> <strong>₹950</strong></div>
+ 
+</div>
+      <a href="tel:+919962742785" class="btn">Call for Details</a>
+    </div>
+
+  </section>
+
+   <div class="text"><h1> More Products Coming Soon</h1></div>
+
+
+
+  
+
+</body>
+</html>
